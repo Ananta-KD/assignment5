@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+.section__title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+header {
+  /* min-height: 3rem; */
+  width: 100%;
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.nav {
+  position: relative;
+  height: 4rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  font-weight: 600;
+  font-family: monospace;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    top: 4rem;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  }
+}
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav__link {
+  font-size: 1rem;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+.open {
+  transform: translateX(0);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+.section-1 {
+  background-color: aquamarine;
+}
+.section-2 {
+  background-color: rgb(136, 231, 199);
+}
+.section-3 {
+  background-color: rgb(128, 203, 178);
+}
+footer {
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  width: 100%;
+  min-height: 3rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    position: relative;
+    width: 80%;
+    right: 1rem;
+    top: 0;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-height: auto;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}
